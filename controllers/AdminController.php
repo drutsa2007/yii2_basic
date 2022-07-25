@@ -24,11 +24,11 @@ class AdminController extends Controller
         $data = Url::findOne($id);
         $code=@get_headers($data->url);
         if (empty($code[0])) $code = 'Нет данных';
-        /*$record = new UrlCode();
+        $record = new UrlCode();
         $record->url_id = $data->id;
         $record->code = $code[0];
         $record->date_check = date('Y-m-d H:i:s');
-        $record->save();*/
+        $record->save();
         $codes = $data->codes;
         return $this->render('check', ['data'=>$data, 'codes'=>$codes, 'code'=>$code]);
     }
