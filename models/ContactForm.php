@@ -40,7 +40,7 @@ class ContactForm extends Model
         return [
             'verifyCode' => 'Verification Code',
         ];
-    }
+    } 
 
     /**
      * Sends an email to the specified email address using the information collected by this model.
